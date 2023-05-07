@@ -1,0 +1,78 @@
+<mvc:View controllerName="table1.tablelistcontrollerproject.controller.Table"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center" showNavButton="true" showHeader="true"  navButtonPress="onPress">
+   
+        <content >
+
+        <!-- <Toolbar>
+                <ToolbarSpacer />
+                <SearchField width="20%" search="onFilterSearch" />
+        </Toolbar> -->
+
+          <Table  id = "table1" mode = "None" sticky="ColumnHeaders,HeaderToolbar" alternateRowColors="true" inset = "true"
+          items = "{Data1>/results}" >
+          
+                           <columns>
+
+                    <Column demandPopin = "true">
+                        <Text text="Name" />
+                    </Column>
+
+                     <Column demandPopin = "true">
+                        <Text text="Employee Role" />
+                     </Column>
+
+                     <Column demandPopin = "true">
+                        <Text text="Gender" />
+                     </Column>
+
+                     <Column demandPopin = "true" >
+                        <Text text="Number" />
+                     </Column>
+
+                     <Column  demandPopin = "true">
+                        <Text text="Address" />
+                     </Column>
+
+                     <!-- <Column demandPopin = "true">
+                            <Text text="Action" />
+                    </Column> -->
+
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                         
+                         <Text text = "{Data1>Name}" />
+                         <Text text = "{Data1>Zemprole}" />
+                         <Text text = "{Data1>Zgender}" />
+                         <Text text = "{Data1>Znumber}" />
+                         <Text text = "{Data1>Zcity}" />
+
+                           <!-- <Input value ="{Data1>Name}" editable = "false" id = "nm1" /> 
+                             <Input value ="{Data1>Zemprole}" editable="false"  id = "emprl"  />
+                            <Input value ="{Data1>Zgender}" editable="false"  id = "gndr"  />
+                            <Input value ="{Data1>Znumber}" editable = "false" id = "num"  />
+                            <Input value ="{Data1>Zcity}" editable = "false" id = "cty"  /> -->
+                           
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>   
+        </content>
+          
+        <footer>
+        <Bar>
+        <contentRight>
+        <Button type ="Emphasized" text = "Go to View2" press = "onPress" />
+        </contentRight>
+        </Bar>
+        </footer>
+
+
+       
+    </Page>
+</mvc:View>

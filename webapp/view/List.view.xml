@@ -1,0 +1,22 @@
+<mvc:View controllerName="table1.tablelistcontrollerproject.controller.List"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title1}" titleAlignment = "Center" showNavButton = "true" navButtonPress = "onNavBack">
+        <content >
+ <List items="{Data1>/results}"
+ 	enableBusyIndicator="true"
+ >
+                <StandardListItem title="{Data1>Matnr}" description="{Data1>Ersda}" info="{Data1>Ernam}" />
+
+          <!-- <List>
+                <StandardListItem
+			title="Pen"
+			description="20pcs"/>
+
+            <StandardListItem
+			title="Register"
+			description="50pcs"/> -->
+            </List>
+        </content>
+    </Page>
+</mvc:View>
